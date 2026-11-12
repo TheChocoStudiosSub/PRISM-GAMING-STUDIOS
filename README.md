@@ -16,6 +16,12 @@ Prism approaches every project as its own creative space. We are interested in e
 - **Brand character:** Curious, imaginative, thoughtful, approachable, and persistent
 - **Visual identity:** A geometric prism mark with a cyan-to-violet light spectrum
 
+## Why Prism joined the TCS ecosystem
+
+Prism Gaming Studios chose to become part of the **The Choco Studios (TCS)** ecosystem because it is interested in TCS's vision and mission: building an open, collaborative ecosystem where ideas, knowledge, and creative work can grow across different fields. TCS's focus on open-source development and shared progress aligns with Prism's belief in learning from one another, exchanging perspectives, and creating opportunities to build together.
+
+This connection allows Prism to contribute to a wider creative environment while preserving its own name, studio identity, creative direction, and approach to game development. Prism remains an independent game studio; its place in the TCS ecosystem does not make it a TCS department or product.
+
 ## What guides our work
 
 1. **Explore** — Start with curiosity, clear ideas, and room to experiment.
@@ -63,10 +69,6 @@ For project discussions and contributions, use the repository's GitHub issues an
 ## Brand use
 
 The Prism name, logo, and visual identity should be presented consistently. Please do not imply official endorsement, affiliation, or authorization when using Prism's identity.
-
-## Ecosystem
-
-Prism Gaming Studios is featured within the **The Choco Studios** ecosystem while maintaining its own studio identity and creative direction.
 
 ---
 
