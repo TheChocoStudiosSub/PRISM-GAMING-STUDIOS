@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="440 70 520 590" role="img" aria-label="Prism Gaming Studios symbol">
+  <defs>
+    <filter id="remove-dark-background" color-interpolation-filters="sRGB">
+      <feColorMatrix type="matrix" values="
+        1 0 0 0 0
+        0 1 0 0 0
+        0 0 1 0 0
+        0.6378 2.1456 0.2166 0 -0.35"/>
+    </filter>
+  </defs>
+  <image x="0" y="0" width="1408" height="1024" xlink:href="./Gemini_Generated_Image_v9omcvv9omcvv9om.jpg" filter="url(#remove-dark-background)"/>
+</svg>
