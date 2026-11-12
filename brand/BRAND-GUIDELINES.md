@@ -70,7 +70,17 @@ Use geometric forms, subtle light gradients, generous negative space, and restra
 
 ## Ecosystem relationship
 
-Prism Gaming Studios is featured within the The Choco Studios ecosystem while retaining its own name, creative direction, and studio identity. Do not present Prism as a department or rename it as a TCS product.
+Prism Gaming Studios chose to become part of the **The Choco Studios (TCS)** ecosystem because it is interested in TCS's vision and mission: building an open, collaborative ecosystem where ideas, knowledge, and creative work can grow across different fields. TCS's focus on open-source development and shared progress aligns with Prism's values of curiosity, collaboration, continuous learning, and creative experimentation.
+
+The relationship is based on shared direction and the opportunity to contribute to a wider creative environment. Prism retains its own name, studio identity, creative direction, and approach to game development. It must not be presented as a TCS department, renamed as a TCS product, or described as having surrendered its independent studio identity.
+
+### How to describe the relationship
+
+Use language such as:
+
+> Prism Gaming Studios is part of the The Choco Studios ecosystem, having joined through a shared interest in TCS's vision of open collaboration, open-source development, and creative growth across different fields. Prism continues to maintain its own identity and creative direction.
+
+Avoid language that implies acquisition, ownership transfer, employment, or operational control unless such details are separately confirmed.
 
 ## Usage
 
