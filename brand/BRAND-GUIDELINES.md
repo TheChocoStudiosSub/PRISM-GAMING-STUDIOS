@@ -41,7 +41,7 @@ To grow a body of distinctive game experiences through experimentation, thoughtf
 
 ### Primary mark
 
-Use `../assets/prism-mark.svg`. Preserve its aspect ratio, geometry, and gradient. Do not stretch, recolor arbitrarily, add effects that reduce legibility, or redraw the mark inconsistently.
+Use `../Gemini_Generated_Image_ul5e1ul5e1ul5e1u.jpg`. Preserve its aspect ratio, geometry, and gradient. Do not stretch, recolor arbitrarily, add effects that reduce legibility, or redraw the mark inconsistently.
 
 ### Color palette
 
