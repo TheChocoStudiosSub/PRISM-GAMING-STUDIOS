@@ -14,7 +14,7 @@ Prism approaches every project as its own creative space. We are interested in e
 - **Tagline:** Play Beyond the Ordinary.
 - **Creative focus:** Game development, gameplay design, interactive experiences, and experimentation
 - **Brand character:** Curious, imaginative, thoughtful, approachable, and persistent
-- **Visual identity:** A geometric prism mark with a cyan-to-violet light spectrum
+- **Visual identity:** A official Gemini-generated Prism logo artwork with a cyan-to-violet light spectrum
 
 ## Why Prism joined the TCS ecosystem
 
@@ -45,7 +45,7 @@ The project is provided as a playable repository project. Its presence does not 
 ## Brand resources
 
 - [Brand guidelines](./brand/BRAND-GUIDELINES.md)
-- [Official Prism logo (SVG)](./assets/prism-mark.svg)
+- [Official Prism logo (SVG)](./Gemini_Generated_Image_ul5e1ul5e1ul5e1u.jpg)
 
 ## Repository structure
 
