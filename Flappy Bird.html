@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Flappy Bird</title>
+<style>
+:root{--bg:#cfe8f5;--fg:#16324a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0f1823;--fg:#e8eef4;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1823;--fg:#e8eef4;color-scheme:dark}
+html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--fg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;font-family:"Trebuchet MS",Verdana,sans-serif;touch-action:manipulation;user-select:none;-webkit-user-select:none}
+canvas{border-radius:16px;box-shadow:0 8px 30px rgba(0,0,0,.25);display:block;max-width:100%}
+button{font:inherit;color:var(--fg);background:transparent;border:2px solid currentColor;border-radius:999px;padding:4px 14px;cursor:pointer}
+button:focus-visible{outline:3px solid #f5a623;outline-offset:2px}
+</style>
+</head>
+<body>
+<canvas id="c" aria-label="Game Flappy Bird. Ketuk atau tekan spasi untuk terbang."></canvas>
+<button id="m" type="button">🔊 Suara nyala</button>
+<script>
+const C=document.getElementById('c'),X=C.getContext('2d');
+const W=360,H=640,G=96,GAP=150,SP=2.4,PW=56,FONT='"Arial Rounded MT Bold","Trebuchet MS",sans-serif';
+C.width=W*2;C.height=H*2;
+function fit(){const h=Math.max(300,Math.min(innerHeight-70,(innerWidth-16)*H/W));C.style.height=h+'px';C.style.width=(h*W/H)+'px'}
+addEventListener('resize',fit);fit();
+
+let st='ready',bird,pipes,score=0,best=0,t=0,gx=0,deadT=0,shake=0,parts=[];
+try{best=+localStorage.getItem('fb-best')||0}catch(e){}
+const clouds=[...Array(5)].map((_,i)=>({x:i*90,y:60+Math.random()*180,s:.6+Math.random()*.8}));
+function reset(){bird={x:100,y:280,v:0};pipes=[];score=0;parts=[]}
+reset();
+
+/* ---------- Suara & musik (dibuat dari kode) ---------- */
+let ac,mg,mute=false;
+const pent=[261.6,293.7,329.6,392,440,523.3,587.3,659.3,784],
+mel=[4,2,4,5,7,5,4,2,4,2,4,5,8,7,5,4],bass=[130.8,130.8,174.6,196];
+function initA(){
+  if(ac){if(ac.state==='suspended')ac.resume();return}
+  try{
+    ac=new(window.AudioContext||window.webkitAudioContext)();
+    mg=ac.createGain();mg.gain.value=.5;mg.connect(ac.destination);
+    let nt=ac.currentTime+.1,si=0;
+    setInterval(()=>{while(nt<ac.currentTime+.4){
+      const n=mel[si%16];
+      if(n>=0)tone(pent[n],.25,'triangle',.06,nt);
+      if(si%4===0)tone(bass[(si>>2)%4],.5,'sine',.12,nt);
+      nt+=.24;si++}},100);
+  }catch(e){}
+}
+function tone(f,d,type,vol,when,to){
+  if(!ac||mute)return;
+  const o=ac.createOscillator(),g=ac.createGain(),s=when||ac.currentTime;
+  o.type=type;o.frequency.setValueAtTime(f,s);
+  if(to)o.frequency.exponentialRampToValueAtTime(to,s+d);
+  g.gain.setValueAtTime(vol,s);g.gain.exponentialRampToValueAtTime(.001,s+d);
+  o.connect(g);g.connect(mg);o.start(s);o.stop(s+d+.02);
+}
+function noise(d,vol){
+  if(!ac||mute)return;
+  const n=ac.sampleRate*d,b=ac.createBuffer(1,n,ac.sampleRate),a=b.getChannelData(0);
+  for(let i=0;i<n;i++)a[i]=(Math.random()*2-1)*(1-i/n);
+  const s=ac.createBufferSource(),g=ac.createGain();g.gain.value=vol;
+  s.buffer=b;s.connect(g);g.connect(mg);s.start();
+}
+const sfx={
+  flap(){tone(420,.12,'square',.1,0,820)},
+  point(){tone(880,.08,'square',.09);tone(1320,.14,'square',.09,ac&&ac.currentTime+.08)},
+  hit(){noise(.25,.35);tone(220,.4,'sawtooth',.18,0,50)}
+};
+document.getElementById('m').addEventListener('pointerdown',e=>e.stopPropagation());
+document.getElementById('m').addEventListener('click',e=>{
+  mute=!mute;e.target.textContent=mute?'🔇 Suara mati':'🔊 Suara nyala';e.target.blur();
+});
+
+/* ---------- Logika game ---------- */
+function flap(){
+  bird.v=-7;sfx.flap();
+  for(let i=0;i<5;i++)parts.push({x:bird.x-10,y:bird.y+6,vx:-1-Math.random()*1.5,vy:Math.random()*2-.5,l:20});
+}
+function die(){
+  if(st==='dead')return;
+  st='dead';deadT=t;shake=10;sfx.hit();
+  if(score>best){best=score;try{localStorage.setItem('fb-best',best)}catch(e){}}
+}
+function act(){
+  initA();
+  if(st==='ready'){st='play';flap()}
+  else if(st==='play')flap();
+  else if(st==='dead'&&t-deadT>35){reset();st='ready'}
+}
+addEventListener('pointerdown',act);
+addEventListener('keydown',e=>{
+  if(e.code==='Space'||e.code==='ArrowUp'){e.preventDefault();if(!e.repeat)act()}
+});
+
+function step(){
+  t++;
+  if(st!=='dead')gx=(gx+SP)%24;
+  clouds.forEach(c=>{c.x-=.15*c.s;if(c.x<-80)c.x=W+60});
+  parts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;p.l--});parts=parts.filter(p=>p.l>0);
+  if(shake>0)shake*=.85;
+  if(st==='ready'){bird.y=280+Math.sin(t/10)*8;return}
+  bird.v+=.38;bird.y+=bird.v;
+  if(bird.y<12){bird.y=12;bird.v=0}
+  if(st==='play'){
+    pipes.forEach(p=>p.x-=SP);
+    if(!pipes.length||pipes[pipes.length-1].x<W-190)
+      pipes.push({x:W+20,gy:80+Math.random()*(H-G-GAP-160),s:false});
+    pipes=pipes.filter(p=>p.x>-PW-10);
+    for(const p of pipes){
+      if(bird.x+11>p.x&&bird.x-11<p.x+PW&&(bird.y-11<p.gy||bird.y+11>p.gy+GAP))die();
+      if(!p.s&&p.x+PW<bird.x){p.s=true;score++;sfx.point()}
+    }
+  }
+  if(bird.y+14>=H-G){bird.y=H-G-14;bird.v=0;die()}
+}
+
+/* ---------- Gambar (semua digambar dari kode) ---------- */
+function rr(x,y,w,h,r){X.beginPath();X.roundRect(x,y,w,h,r)}
+function text(s,x,y,size,col,align){
+  X.font='bold '+size+'px '+FONT;X.textAlign=align||'center';
+  X.lineWidth=size/6;X.strokeStyle='rgba(20,40,60,.85)';X.lineJoin='round';
+  X.strokeText(s,x,y);X.fillStyle=col||'#fff';X.fillText(s,x,y);
+}
+function draw(){
+  X.setTransform(2,0,0,2,0,0);
+  X.save();
+  if(shake>.5)X.translate((Math.random()-.5)*shake,(Math.random()-.5)*shake);
+  let g=X.createLinearGradient(0,0,0,H-G);
+  g.addColorStop(0,'#4ea8de');g.addColorStop(1,'#bfe9f7');
+  X.fillStyle=g;X.fillRect(-10,-10,W+20,H);
+  X.fillStyle='rgba(255,230,150,.9)';X.beginPath();X.arc(280,110,34,0,7);X.fill();
+  X.fillStyle='rgba(255,255,255,.85)';
+  clouds.forEach(c=>{X.beginPath();
+    X.arc(c.x,c.y,18*c.s,0,7);X.arc(c.x+20*c.s,c.y-8*c.s,22*c.s,0,7);X.arc(c.x+42*c.s,c.y,17*c.s,0,7);X.fill()});
+  X.fillStyle='#8fd3a4';X.beginPath();X.moveTo(0,H-G);
+  for(let x=0;x<=W;x+=10)X.lineTo(x,H-G-40-Math.sin(x/55+1)*22-Math.sin(x/23)*6);
+  X.lineTo(W,H-G);X.fill();
+  pipes.forEach(p=>{
+    pipe(p.x,0,PW,p.gy,true);pipe(p.x,p.gy+GAP,PW,H-G-p.gy-GAP,false);
+  });
+  X.fillStyle='#ded895';X.fillRect(-10,H-G,W+20,G);
+  X.fillStyle='#73bf2e';X.fillRect(-10,H-G,W+20,14);
+  X.fillStyle='#5aa01c';
+  for(let x=-24;x<W+24;x+=24){X.beginPath();X.moveTo(x-gx,H-G);X.lineTo(x-gx+12,H-G);X.lineTo(x-gx+2,H-G+14);X.lineTo(x-gx-10,H-G+14);X.fill()}
+  X.fillStyle='#c9bf7a';X.fillRect(-10,H-G+14,W+20,4);
+  parts.forEach(p=>{X.globalAlpha=p.l/20;X.fillStyle='#fff';X.beginPath();X.arc(p.x,p.y,3,0,7);X.fill()});
+  X.globalAlpha=1;
+  drawBird();
+  X.restore();
+  if(st==='play')text(score,W/2,90,56);
+  if(st==='ready'){
+    text('Flappy Bird',W/2,170,44,'#ffd23f');
+    text('Ketuk atau tekan spasi',W/2,400,20);
+    text('untuk terbang',W/2,428,20);
+    if(best)text('Terbaik: '+best,W/2,470,18,'#ffd23f');
+  }
+  if(st==='dead'&&t-deadT>20){
+    X.fillStyle='rgba(255,255,255,.95)';rr(60,200,240,190,18);X.fill();
+    X.lineWidth=4;X.strokeStyle='#d9a441';X.stroke();
+    X.fillStyle='#16324a';X.textAlign='center';
+    X.font='bold 28px '+FONT;X.fillText('Game selesai',W/2,245);
+    X.font='20px '+FONT;X.fillText('Skor: '+score,W/2,290);
+    X.fillText('Terbaik: '+best,W/2,320);
+    X.font='16px '+FONT;X.fillStyle='#c0392b';
+    X.fillText(t-deadT>35?'Ketuk untuk main lagi':'...',W/2,365);
+  }
+}
+function pipe(x,y,w,h,top){
+  if(h<=0)return;
+  let g=X.createLinearGradient(x,0,x+w,0);
+  g.addColorStop(0,'#5aa01c');g.addColorStop(.35,'#9be04a');g.addColorStop(1,'#4b8a15');
+  X.fillStyle=g;X.strokeStyle='#2f5a0c';X.lineWidth=2.5;
+  X.fillRect(x,y,w,h);X.strokeRect(x,y,w,h);
+  const cy=top?y+h-24:y;
+  X.fillRect(x-4,cy,w+8,24);X.strokeRect(x-4,cy,w+8,24);
+}
+function drawBird(){
+  X.save();X.translate(bird.x,bird.y);
+  X.rotate(Math.max(-.5,Math.min(1.2,bird.v*.08)));
+  X.fillStyle='#f7c82a';X.strokeStyle='#8a5a12';X.lineWidth=2.5;
+  X.beginPath();X.ellipse(0,0,17,14,0,0,7);X.fill();X.stroke();
+  X.fillStyle='#fde68a';X.beginPath();X.ellipse(2,6,10,6,0,0,7);X.fill();
+  const w=st==='dead'?0:Math.sin(t*.5)*7;
+  X.fillStyle='#f0a81c';X.beginPath();X.ellipse(-6,2+w*.4,9,5+Math.abs(w)*.3,-.3,0,7);X.fill();X.stroke();
+  X.fillStyle='#fff';X.beginPath();X.arc(8,-6,6,0,7);X.fill();X.stroke();
+  X.fillStyle='#111';X.beginPath();X.arc(10,-6,2.5,0,7);X.fill();
+  X.fillStyle='#e8572a';X.beginPath();X.moveTo(13,0);X.lineTo(25,3);X.lineTo(13,9);X.closePath();X.fill();X.stroke();
+  X.restore();
+}
+
+let last=0,acc=0;
+function loop(ts){
+  acc+=Math.min(100,ts-last);last=ts;
+  while(acc>=1000/60){step();acc-=1000/60}
+  draw();requestAnimationFrame(loop);
+}
+requestAnimationFrame(ts=>{last=ts;loop(ts)});
+</script>
+</body>
+</html>
