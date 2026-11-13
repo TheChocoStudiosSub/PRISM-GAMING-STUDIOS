@@ -2,73 +2,73 @@
 
 **Play Beyond the Ordinary.**
 
-Prism Gaming Studios is an independent game studio exploring playful ideas and turning them into interactive experiences. We value thoughtful game design, accessible gameplay, experimentation, and steady iteration.
+Prism Gaming Studios, also known as Prism, is a solo independent game studio. Its work focuses on browser games that can be played directly on the web and desktop applications distributed as `.exe` files for Windows.
 
-Prism approaches every project as its own creative space. We are interested in exploring different genres, mechanics, visual directions, and technologies rather than following a single formula.
+Prism is built and run solo. The personal identity behind the studio is intentionally not published as a matter of privacy. The work is the focus.
 
-## Our identity
+## Identity
 
 - **Name:** Prism Gaming Studios
 - **Short name:** Prism
-- **Studio type:** Independent game studio
 - **Tagline:** Play Beyond the Ordinary.
-- **Creative focus:** Game development, gameplay design, interactive experiences, and experimentation
-- **Brand character:** Curious, imaginative, thoughtful, approachable, and persistent
-- **Visual identity:** A official Gemini-generated Prism logo artwork with a cyan-to-violet light spectrum
+- **Studio type:** Solo independent game studio
+- **Product focus:** Browser games and Windows desktop applications in `.exe` format
+- **Source model:** Closed-source. The repository is private and access is restricted.
 
-## Why Prism joined the TCS ecosystem
+## About the studio
 
-Prism Gaming Studios chose to become part of the **The Choco Studios (TCS)** ecosystem because it is interested in TCS's vision and mission: building an open, collaborative ecosystem where ideas, knowledge, and creative work can grow across different fields. TCS's focus on open-source development and shared progress aligns with Prism's belief in learning from one another, exchanging perspectives, and creating opportunities to build together.
+The name Prism comes from the way a prism turns one beam of light into many colours. It reflects the idea that one thought can be explored in different ways and become many different experiences.
 
-This connection allows Prism to contribute to a wider creative environment while preserving its own name, studio identity, creative direction, and approach to game development. Prism remains an independent game studio; its place in the TCS ecosystem does not make it a TCS department or product.
+Prism works through curiosity, creativity, craft, accessibility, iteration, and collaboration. Its process is straightforward: explore an idea, build an experience, and refine it through testing and continued iteration.
 
-## What guides our work
+## Relationship with The Choco Studios
 
-1. **Explore** — Start with curiosity, clear ideas, and room to experiment.
-2. **Build** — Prioritize understandable mechanics, responsive controls, and cohesive experiences.
-3. **Refine** — Test, learn, and improve through deliberate iteration.
+Prism is part of The Choco Studios (TCS) ecosystem through collaboration. Prism and TCS are independent solo projects that share a belief in curiosity, consistent iteration, and creative growth.
 
-## Official studio page
+Prism retains its own name, identity, and creative direction. TCS serves as a shared space for communication and connection. This collaboration does not change Prism into a TCS product or department.
 
-Open the [Prism Gaming Studios website](./index.html) for the studio profile, creative approach, and project overview.
+## Values
 
-## Projects
+- **Curiosity:** Explore questions and possibilities.
+- **Creativity:** Give ideas room to become distinct experiences.
+- **Craft:** Pay attention to controls, performance, and detail.
+- **Accessibility:** Make experiences approachable to use and play.
+- **Iteration:** Test, learn, and improve.
+- **Collaboration:** Connect through shared ideas and respectful work.
+
+## Project
 
 ### Flappy Bird
 
-A browser-playable arcade game project featuring touch and keyboard controls, score tracking, local best-score storage, generated sound effects, and a responsive layout.
+A browser version of the arcade game with touch and keyboard controls, score tracking, a locally saved best score, and generated sound effects.
 
 [Play Flappy Bird](./Flappy%20Bird.html)
 
-The project is provided as a playable repository project. Its presence does not imply a commercial release or a production support commitment.
+## Contact
+
+To contact Prism, contact Prism through The Choco Studios using the public TCS contact email:
+
+[thechocostudio@gmail.com](mailto:thechocostudio@gmail.com)
 
 ## Brand resources
 
 - [Brand guidelines](./brand/BRAND-GUIDELINES.md)
-- [Official Prism logo (SVG)](./Gemini_Generated_Image_ul5e1ul5e1ul5e1u.jpg)
+- Original Prism logo: `Gemini_Generated_Image_v9omcvv9omcvv9om.jpg`
 
-## Repository structure
+## Repository contents
 
 ```text
 .
-├── assets/
-│   └── prism-mark.svg
 ├── brand/
 │   └── BRAND-GUIDELINES.md
 ├── Flappy Bird.html
+├── Gemini_Generated_Image_ul5e1ul5e1ul5e1u.jpg
+├── Gemini_Generated_Image_v9omcvv9omcvv9om.jpg
 ├── index.html
 └── README.md
 ```
 
-## Collaboration
-
-Prism welcomes thoughtful collaboration across game development, gameplay and level design, visual art, audio, testing, and creative exploration. Contributions should be purposeful, respectful, and aligned with the needs of the project.
-
-For project discussions and contributions, use the repository's GitHub issues and pull requests.
-
-## Brand use
-
-The Prism name, logo, and visual identity should be presented consistently. Please do not imply official endorsement, affiliation, or authorization when using Prism's identity.
+The source code is closed-source. No public source-code access or contribution process is offered.
 
 ---
 
