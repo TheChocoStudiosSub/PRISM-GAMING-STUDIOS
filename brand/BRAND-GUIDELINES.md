@@ -98,7 +98,7 @@ Do not describe Prism as a TCS department, product, subsidiary, or team. Do not 
 
 Prism is contacted through The Choco Studios using its public contact route. The public TCS contact email currently used for this purpose is:
 
-`thechocostudio@gmail.com`
+`thechocostudios@gmail.com`
 
 Do not replace this with a personal-name email address or invent additional contact routes.
 
