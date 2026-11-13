@@ -1,87 +1,118 @@
-# Prism Gaming Studios — Brand Guidelines
+# Prism Gaming Studios Brand Guidelines
 
 ## Core identity
 
 - **Full name:** Prism Gaming Studios
 - **Short name:** Prism
 - **Tagline:** Play Beyond the Ordinary.
-- **Category:** Independent game studio
-- **Purpose:** Explore creative ideas and turn them into thoughtful, accessible interactive experiences.
+- **Category:** Solo independent game studio
+- **Product focus:** Browser games and Windows desktop applications distributed as `.exe` files
+- **Source model:** Closed-source
+
+## Brand idea
+
+A prism turns one beam of light into many colours. The name represents the idea that one thought can be explored from different angles and developed into many different experiences.
 
 ## Brand positioning
 
-Prism is an independent game studio with a curious, experimental, and player-conscious approach to game development. It is open to different genres, visual styles, mechanics, and technologies. The studio identity should feel credible and consistent without suggesting a scale, release history, or team size that has not been established.
+Prism is an independent game studio built and run solo. Its personal identity is intentionally not published as a matter of privacy. Public communication should focus on the studio and its work, not on identifying the individual behind it.
 
-## Mission
+Prism develops browser games and Windows desktop applications. Describe only products, features, and capabilities that have been confirmed. Do not imply a larger team or an unverified release history.
 
-To turn creative curiosity into interactive experiences that invite people to play, explore, and see familiar ideas from a different perspective.
+## Mission and approach
 
-## Vision
-
-To grow a body of distinctive game experiences through experimentation, thoughtful craft, and continuous learning.
+Explore ideas with curiosity, build useful and enjoyable experiences, then refine them through testing and iteration. Keep the process practical, thoughtful, and open to learning.
 
 ## Values
 
-1. **Curiosity** — Ask questions, explore possibilities, and remain open to new ideas.
-2. **Creativity** — Give each project a clear point of view and room for original expression.
-3. **Craft** — Care about controls, mechanics, usability, and the details that shape play.
-4. **Accessibility** — Make experiences approachable and considerate of different players and devices.
-5. **Iteration** — Test, learn, and improve rather than treating the first version as the final answer.
-6. **Collaboration** — Welcome respectful contributions and shared learning.
+1. **Curiosity:** Ask questions, explore possibilities, and remain open to new ideas.
+2. **Creativity:** Give each idea room to become a distinct experience.
+3. **Craft:** Care about controls, performance, usability, and detail.
+4. **Accessibility:** Make experiences approachable and considerate of how people use them.
+5. **Iteration:** Test, learn, and improve through consistent refinement.
+6. **Collaboration:** Connect through shared ideas and respectful creative work.
 
 ## Voice and writing
 
-- Clear, imaginative, and grounded.
-- Confident without exaggerated claims.
-- Welcoming without sounding corporate.
-- Describe actual project status accurately.
-- Avoid claims about awards, releases, team size, locations, founding dates, or partnerships unless verified.
+- Clear, grounded, warm, and confident.
+- Avoid corporate language and exaggerated claims.
+- Use a neutral studio voice. Do not imply a group or team.
+- Do not publish a personal name or personal contact details.
+- Do not claim awards, team size, founding date, location, player counts, release dates, or partnerships unless independently verified.
+- Prism is closed-source. Do not describe Prism as open-source or invite public source-code contributions.
+- Do not add links or calls to action to source-code hosting services.
 
-## Visual system
+## Visual identity
 
-### Primary mark
+### Official logo
 
-Use `../Gemini_Generated_Image_ul5e1ul5e1ul5e1u.jpg`. Preserve its aspect ratio, geometry, and gradient. Do not stretch, recolor arbitrarily, add effects that reduce legibility, or redraw the mark inconsistently.
+Use the existing original image:
 
-### Color palette
+`../Gemini_Generated_Image_v9omcvv9omcvv9om.jpg`
 
-| Role | Color | Hex |
+Preserve the logo exactly as supplied. Do not redraw it, recolour it, crop away part of it, apply filters, or add visual effects. Keep its proportions intact.
+
+### Colour palette
+
+Use a neutral palette with one restrained warm accent. Do not use green, blue, cyan, teal, purple, or violet in the user interface.
+
+| Role | Colour | Hex |
 |---|---|---|
-| Background | Deep midnight | `#090B14` |
-| Surface | Dark indigo | `#111625` |
-| Primary text | Soft white | `#F4F5FF` |
-| Muted text | Blue grey | `#A2ABC2` |
-| Spectrum cyan | Light cyan | `#8CE8EE` |
-| Spectrum violet | Soft violet | `#B7A2FF` |
+| Main background | Warm off-white | `#F3EFE7` |
+| Secondary background | Warm light grey | `#E9E2D7` |
+| Main text | Charcoal | `#24221F` |
+| Secondary text | Warm grey | `#625D56` |
+| Dark section background | Charcoal | `#24221F` |
+| Dark section text | Warm white | `#F5F0E8` |
+| Single accent | Burnt orange | `#BD6336` |
+| Accent hover | Deep warm brown | `#984A27` |
+
+The original logo is an exception to interface colour restrictions and must remain unchanged.
 
 ### Typography
 
-Use a clean modern sans-serif stack. Headlines may be expressive and large; body copy should remain readable and restrained.
+Use one clean system sans-serif family. Keep body text comfortably readable and at least 14px. Use clear hierarchy, restrained weights, and generous line spacing.
 
-### Graphic language
+### Layout and graphic language
 
-Use geometric forms, subtle light gradients, generous negative space, and restrained cyan/violet accents. Visual effects should support the content rather than compete with it.
+- Prefer a simple, spacious, single-column layout.
+- Separate sections with spacing and background colour changes.
+- Do not use decorative rules, dividers, borders, rings, orbit graphics, tickers, numbered section labels, or decorative microcopy.
+- Do not use gradients, glow, neon, glass effects, decorative blur, or conspicuous animation.
+- Use plain, accessible buttons with clear labels.
+- Support keyboard navigation and responsive layouts.
+
+## Ecosystem relationship with The Choco Studios
+
+Prism is part of The Choco Studios (TCS) ecosystem through collaboration. Prism and TCS are independent solo projects that share a belief in curiosity, consistent iteration, and creative growth.
+
+Prism retains its own name, identity, and creative direction. TCS serves as a shared space for communication. This relationship is a collaboration, not a transfer of identity, ownership, or creative direction.
+
+### Approved description
+
+> Prism is part of The Choco Studios ecosystem through collaboration. Both Prism and TCS are independent solo projects that share a belief in curiosity, consistent iteration, and creative growth. Prism keeps its own name, identity, and creative direction, while TCS serves as a shared space for communication.
+
+Do not describe Prism as a TCS department, product, subsidiary, or team. Do not claim that Prism and TCS are operated by different people.
+
+## Contact
+
+Prism is contacted through The Choco Studios using its public contact route. The public TCS contact email currently used for this purpose is:
+
+`thechocostudio@gmail.com`
+
+Do not replace this with a personal-name email address or invent additional contact routes.
 
 ## Naming
 
 - First mention: **Prism Gaming Studios**
 - Subsequent mentions: **Prism**
-- Tagline capitalization: **Play Beyond the Ordinary.**
+- Tagline: **Play Beyond the Ordinary.**
+- About tagline: **Quietly made. Openly played.**
 
-## Ecosystem relationship
+## Accuracy rule
 
-Prism Gaming Studios chose to become part of the **The Choco Studios (TCS)** ecosystem because it is interested in TCS's vision and mission: building an open, collaborative ecosystem where ideas, knowledge, and creative work can grow across different fields. TCS's focus on open-source development and shared progress aligns with Prism's values of curiosity, collaboration, continuous learning, and creative experimentation.
+Never claim a feature, release, partnership, award, metric, date, location, team structure, or other detail that has not been verified. When information is unknown, leave it out rather than filling the gap with an assumption.
 
-The relationship is based on shared direction and the opportunity to contribute to a wider creative environment. Prism retains its own name, studio identity, creative direction, and approach to game development. It must not be presented as a TCS department, renamed as a TCS product, or described as having surrendered its independent studio identity.
+---
 
-### How to describe the relationship
-
-Use language such as:
-
-> Prism Gaming Studios is part of the The Choco Studios ecosystem, having joined through a shared interest in TCS's vision of open collaboration, open-source development, and creative growth across different fields. Prism continues to maintain its own identity and creative direction.
-
-Avoid language that implies acquisition, ownership transfer, employment, or operational control unless such details are separately confirmed.
-
-## Usage
-
-The Prism name and mark identify the studio and its official work. Do not imply endorsement or authorization when using them without permission.
+© 2026 Prism Gaming Studios
