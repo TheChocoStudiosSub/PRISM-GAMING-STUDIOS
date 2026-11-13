@@ -48,7 +48,7 @@ A browser version of the arcade game with touch and keyboard controls, score tra
 
 To contact Prism, contact Prism through The Choco Studios using the public TCS contact email:
 
-[thechocostudio@gmail.com](mailto:thechocostudio@gmail.com)
+[thechocostudios@gmail.com](mailto:thechocostudios@gmail.com)
 
 ## Brand resources
 
