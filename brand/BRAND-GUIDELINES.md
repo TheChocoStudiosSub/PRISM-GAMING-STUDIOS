@@ -39,7 +39,7 @@ Explore ideas with curiosity, build useful and enjoyable experiences, then refin
 - Use a neutral studio voice. Do not imply a group or team.
 - Do not publish a personal name or personal contact details.
 - Do not claim awards, team size, founding date, location, player counts, release dates, or partnerships unless independently verified.
-- Prism is closed-source. Do not describe Prism as open-source or invite public source-code contributions.
+- Prism is closed-source. Do not present source code as publicly available or invite public source-code contributions.
 - Do not add links or calls to action to source-code hosting services.
 
 ## Visual identity
