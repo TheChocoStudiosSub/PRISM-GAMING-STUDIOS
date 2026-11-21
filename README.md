@@ -2,16 +2,16 @@
 
 **Play Beyond the Ordinary.**
 
-Prism Gaming Studios, also known as Prism, is a solo independent game studio. Its work focuses on browser games that can be played directly on the web and desktop applications distributed as `.exe` files for Windows.
+Prism Gaming Studios, also known as Prism, is the dedicated game-development subproject and branch of The Choco Studios (TCS). It focuses on browser games and Windows desktop game projects while retaining the Prism name, logo, tagline, and creative identity as TCS's game label.
 
-Prism is built and run solo. The personal identity behind the studio is intentionally not published as a matter of privacy. The work is the focus.
+Prism is developed within the TCS ecosystem as its dedicated game-development branch. The identities of individual contributors are not published unless they have explicitly agreed to public attribution. Public communication should focus on the Prism game projects and their actual status.
 
 ## Identity
 
 - **Name:** Prism Gaming Studios
 - **Short name:** Prism
 - **Tagline:** Play Beyond the Ordinary.
-- **Studio type:** Solo independent game studio
+- **Studio type:** TCS game-development subproject / dedicated game branch
 - **Product focus:** Browser games and Windows desktop applications in `.exe` format
 - **Source model:** Closed-source. The repository is private and access is restricted.
 
@@ -19,13 +19,19 @@ Prism is built and run solo. The personal identity behind the studio is intentio
 
 The name Prism comes from the way a prism turns one beam of light into many colours. It reflects the idea that one thought can be explored in different ways and become many different experiences.
 
-Prism works through curiosity, creativity, craft, accessibility, iteration, and collaboration. Its process is straightforward: explore an idea, build an experience, and refine it through testing and continued iteration.
+Prism works through curiosity, creativity, craft, accessibility, iteration, and collaboration as part of TCS. Its process is to explore a game idea, build an initial playable version, and refine it through review, testing, and continued iteration.
 
 ## Relationship with The Choco Studios
 
-Prism is part of The Choco Studios (TCS) ecosystem through collaboration. Prism and TCS are independent solo projects that share a belief in curiosity, consistent iteration, and creative growth.
+Prism Gaming Studios is a dedicated game-development subproject and branch within The Choco Studios (TCS) ecosystem. It is not an independent outside studio that merely collaborates with TCS. Prism is the distinct name and creative identity used for TCS's game-development work.
 
-Prism retains its own name, identity, and creative direction. TCS serves as a shared space for communication and connection. This collaboration does not change Prism into a TCS product or department.
+Prism keeps its own name, logo, tagline, and game-focused identity while operating as part of TCS. Its projects are part of the TCS ecosystem and should be documented, reviewed, and presented with their actual development status.
+
+### Approved description
+
+> Prism Gaming Studios is the game-development branch of The Choco Studios (TCS). It focuses on browser games and Windows desktop game projects while keeping the Prism name and creative identity as TCS's dedicated game label.
+
+Describe Prism as a TCS subproject or game-development branch. Do not describe Prism as an independent outside studio, external partner, or separate solo project.
 
 ## Values
 
@@ -38,9 +44,11 @@ Prism retains its own name, identity, and creative direction. TCS serves as a sh
 
 ## Project
 
-### Flappy Bird
+### Flappy Bird — first Prism game project under TCS
 
-A browser version of the arcade game with touch and keyboard controls, score tracking, a locally saved best score, and generated sound effects.
+The first game project submitted for the Prism branch is a single-file browser implementation of Flappy Bird. The current HTML file includes touch and keyboard controls, score tracking, a locally saved best score, and generated sound effects.
+
+This is the initial game contribution and starting point for the TCS game branch. It should not be presented as evidence of a large completed game catalogue or a separate Windows release.
 
 [Play Flappy Bird](./Flappy%20Bird.html)
 
