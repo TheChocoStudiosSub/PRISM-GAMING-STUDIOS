@@ -83,4 +83,4 @@ The source code is closed-source. No public source-code access or contribution p
 
 ---
 
-© 2026 Vornika+-+-
+© 2026 Vornika+-
