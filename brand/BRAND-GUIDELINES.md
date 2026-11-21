@@ -118,4 +118,4 @@ Never claim a feature, release, partnership, award, metric, date, location, team
 
 ---
 
-© 2026 Vornika+-+-
+© 2026 Vornika+-
