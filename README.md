@@ -58,7 +58,7 @@ This is the initial game contribution and starting point for the TCS game branch
 
 To contact Prism, contact Prism through The Choco Studios using the public TCS contact email:
 
-[thechocostudio@gmail.com](mailto:thechocostudio@gmail.com)
+[thechocostudios@gmail.com](mailto:thechocostudios@gmail.com)
 
 ## Brand resources
 
