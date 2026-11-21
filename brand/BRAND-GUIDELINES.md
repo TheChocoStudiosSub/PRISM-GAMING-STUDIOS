@@ -1,9 +1,10 @@
-# Prism Gaming Studios Brand Guidelines
+# Vornika+- Brand Guidelines
 
 ## Core identity
 
-- **Full name:** Prism Gaming Studios
-- **Short name:** Prism
+- **Full name:** Vornika+-
+- **Short name:** Vornika
+- **Previous name:** Prism Gaming Studios (historical identity)
 - **Tagline:** Play Beyond the Ordinary.
 - **Category:** TCS ecosystem unit for game development, voluntarily integrated from an independent origin
 - **Product focus:** Browser games and Windows desktop applications distributed as `.exe` files
@@ -11,13 +12,13 @@
 
 ## Brand idea
 
-A prism turns one beam of light into many colours. The name represents the idea that one thought can be explored from different angles and developed into many different experiences.
+Vornika+- is an original brand identity. The +- symbol represents learning through both strengths and shortcomings, then improving through each development iteration.
 
 ## Brand positioning
 
-Prism began as an independently developed creative initiative. It voluntarily joined The Choco Studios (TCS) after recognising the breadth of TCS's ideas and cross-disciplinary exploration, believing that the wider ecosystem could offer fresh perspectives and room for Prism's own creative development. Prism now serves as TCS's dedicated game-development unit while retaining the Prism name, logo, tagline, and creative identity. Do not publish individual identities without explicit consent.
+Vornika began as an independently developed creative initiative. It voluntarily joined The Choco Studios (TCS) after recognising the breadth of TCS's ideas and cross-disciplinary exploration, believing that the wider ecosystem could offer fresh perspectives and room for Vornika's own creative development. Vornika now serves as TCS's dedicated game-development unit while retaining the Vornika name, logo, tagline, and creative identity. Do not publish individual identities without explicit consent.
 
-Prism's documented scope includes browser games and Windows desktop game projects. Describe only products, features, and capabilities that have been confirmed. Do not imply an unverified release history or a large team.
+Vornika's documented scope includes browser games and Windows desktop game projects. Describe only products, features, and capabilities that have been confirmed. Do not imply an unverified release history or a large team.
 
 ## Mission and approach
 
@@ -39,7 +40,7 @@ Explore ideas with curiosity, build useful and enjoyable experiences, then refin
 - Use a neutral studio voice. Do not imply a group or team.
 - Do not publish a personal name or personal contact details.
 - Do not claim awards, team size, founding date, location, player counts, release dates, or partnerships unless independently verified.
-- Prism is closed-source. Do not present source code as publicly available or invite public source-code contributions.
+- Vornika is closed-source. Do not present source code as publicly available or invite public source-code contributions.
 - Do not add links or calls to action to source-code hosting services.
 
 ## Visual identity
@@ -84,21 +85,21 @@ Use one clean system sans-serif family. Keep body text comfortably readable and 
 
 ## Relationship with The Choco Studios
 
-Prism originated as an independent creative initiative. As it considered its future, Prism recognised that TCS develops ideas across a broad range of fields and believed that joining the ecosystem could bring new perspectives and wider possibilities for its own creative growth. Prism therefore voluntarily proposed joining TCS and becoming its dedicated game-development unit.
+Vornika originated as an independent creative initiative. As it considered its future, Vornika recognised that TCS develops ideas across a broad range of fields and believed that joining the ecosystem could bring new perspectives and wider possibilities for its own creative growth. Vornika therefore voluntarily proposed joining TCS and becoming its dedicated game-development unit.
 
-Prism's role is to lead the game-focused direction within the TCS ecosystem. When TCS develops a game initiative, Prism is the dedicated unit through which that game work is initiated and developed. The integration is voluntary and was initiated by Prism itself; Prism was not originally created by TCS and is not an outside studio that merely collaborates with it.
+Vornika's role is to lead the game-focused direction within the TCS ecosystem. When TCS develops a game initiative, Vornika is the dedicated unit through which that game work is initiated and developed. The integration is voluntary and was initiated by Vornika itself; Vornika was not originally created by TCS and is not an outside studio that merely collaborates with it.
 
-Prism retains its name, logo, tagline, and creative direction while forming part of the TCS ecosystem. Its projects must be documented, reviewed, and presented with their actual development status.
+Vornika+- is the current identity of the same TCS game-development unit previously known as Prism Gaming Studios. The previous identity remains part of its history. The existing logo and creative direction are retained, and its projects must be documented, reviewed, and presented with their actual development status.
 
 ### Approved description
 
-> Prism Gaming Studios began as an independent creative initiative and voluntarily joined The Choco Studios (TCS) ecosystem. It now serves as TCS's dedicated game-development unit, bringing its own identity and game-focused creativity into TCS's wider range of ideas and projects.
+> Vornika+- began as an independent creative initiative and voluntarily joined The Choco Studios (TCS) ecosystem. It now serves as TCS's dedicated game-development unit, bringing its own identity and game-focused creativity into TCS's wider range of ideas and projects.
 
-Do not describe Prism as a studio created by TCS, an external partner, or a merely temporary collaborator.
+Do not describe Vornika as a studio created by TCS, an external partner, or a merely temporary collaborator.
 
 ## Contact
 
-Prism is contacted through The Choco Studios using its public contact route. The public TCS contact email currently used for this purpose is:
+Vornika is contacted through The Choco Studios using its public contact route. The public TCS contact email currently used for this purpose is:
 
 `thechocostudios@gmail.com`
 
@@ -106,8 +107,8 @@ Do not replace this with a personal-name email address or invent additional cont
 
 ## Naming
 
-- First mention: **Prism Gaming Studios**
-- Subsequent mentions: **Prism**
+- First mention: **Vornika+-**
+- Subsequent mentions: **Vornika**
 - Tagline: **Play Beyond the Ordinary.**
 - About tagline: **Quietly made. Openly played.**
 
@@ -117,4 +118,4 @@ Never claim a feature, release, partnership, award, metric, date, location, team
 
 ---
 
-© 2026 Prism Gaming Studios
+© 2026 Vornika+-+-
