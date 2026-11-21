@@ -5,7 +5,7 @@
 - **Full name:** Prism Gaming Studios
 - **Short name:** Prism
 - **Tagline:** Play Beyond the Ordinary.
-- **Category:** TCS game-development subproject / dedicated game branch
+- **Category:** TCS ecosystem unit for game development, voluntarily integrated from an independent origin
 - **Product focus:** Browser games and Windows desktop applications distributed as `.exe` files
 - **Source model:** Closed-source
 
@@ -15,7 +15,7 @@ A prism turns one beam of light into many colours. The name represents the idea 
 
 ## Brand positioning
 
-Prism is the game-focused subproject and branch of The Choco Studios (TCS). It develops games within the TCS ecosystem while retaining the Prism name, logo, tagline, and creative identity as a dedicated game label. Individual contributors' personal identities are not published unless they have explicitly agreed to public attribution.
+Prism began as an independently developed creative initiative. It voluntarily joined The Choco Studios (TCS) after recognising the breadth of TCS's ideas and cross-disciplinary exploration, believing that the wider ecosystem could offer fresh perspectives and room for Prism's own creative development. Prism now serves as TCS's dedicated game-development unit while retaining the Prism name, logo, tagline, and creative identity. Do not publish individual identities without explicit consent.
 
 Prism's documented scope includes browser games and Windows desktop game projects. Describe only products, features, and capabilities that have been confirmed. Do not imply an unverified release history or a large team.
 
@@ -84,15 +84,17 @@ Use one clean system sans-serif family. Keep body text comfortably readable and 
 
 ## Relationship with The Choco Studios
 
-Prism Gaming Studios is a dedicated game-development branch within The Choco Studios (TCS) ecosystem. It is not an independent outside studio that merely collaborates with TCS. Prism is the distinct name and creative identity used for TCS game-development work.
+Prism originated as an independent creative initiative. As it considered its future, Prism recognised that TCS develops ideas across a broad range of fields and believed that joining the ecosystem could bring new perspectives and wider possibilities for its own creative growth. Prism therefore voluntarily proposed joining TCS and becoming its dedicated game-development unit.
 
-Prism retains its name, logo, tagline, and creative identity while operating as a TCS subproject. Its game projects are part of the TCS ecosystem and should be documented, reviewed, and presented with their actual development status.
+Prism's role is to lead the game-focused direction within the TCS ecosystem. When TCS develops a game initiative, Prism is the dedicated unit through which that game work is initiated and developed. The integration is voluntary and was initiated by Prism itself; Prism was not originally created by TCS and is not an outside studio that merely collaborates with it.
+
+Prism retains its name, logo, tagline, and creative direction while forming part of the TCS ecosystem. Its projects must be documented, reviewed, and presented with their actual development status.
 
 ### Approved description
 
-> Prism Gaming Studios is the game-development branch of The Choco Studios (TCS). It focuses on browser games and Windows desktop game projects while keeping the Prism name and creative identity as TCS's dedicated game label.
+> Prism Gaming Studios began as an independent creative initiative and voluntarily joined The Choco Studios (TCS) ecosystem. It now serves as TCS's dedicated game-development unit, bringing its own identity and game-focused creativity into TCS's wider range of ideas and projects.
 
-Do not describe Prism as an independent outside studio, external partner, or separate solo project.
+Do not describe Prism as a studio created by TCS, an external partner, or a merely temporary collaborator.
 
 ## Contact
 
