@@ -1,0 +1,38 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "vornikastudios.vercel.app"
+        }
+      ],
+      "destination": "https://vornika.thechocostudios.bond/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "vornika-games.vercel.app"
+        }
+      ],
+      "destination": "https://vornika.thechocostudios.bond/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "prism-gaming-studios.vercel.app"
+        }
+      ],
+      "destination": "https://vornika.thechocostudios.bond/:path*",
+      "permanent": true
+    }
+  ]
+}
