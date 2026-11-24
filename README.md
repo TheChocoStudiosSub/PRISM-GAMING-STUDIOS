@@ -13,7 +13,8 @@ Vornika's integration was initiated voluntarily by Vornika itself. Its public st
 - **Previous name:** Prism Gaming Studios (retained for historical records)
 - **Tagline:** Play Beyond the Ordinary.
 - **Studio type:** TCS ecosystem unit for game development, voluntarily integrated from an independent origin
-- **Product focus:** Browser games and Windows desktop applications in `.exe` format
+- **Official website:** https://vornika.thechocostudios.bond/
+- **Product focus:** Browser games and Windows desktop applications. The current repository verifies one browser-based Flappy Bird prototype; no separate Windows `.exe` release is documented.
 - **Source model:** Closed-source. The repository is private and access is restricted.
 
 ## About the studio
@@ -54,6 +55,10 @@ The first game project submitted for the Vornika branch is a single-file browser
 This is the initial game contribution and starting point for the TCS game branch. It should not be presented as evidence of a large completed game catalogue or a separate Windows release.
 
 [Play Flappy Bird](./Flappy%20Bird.html)
+
+## Website
+
+https://vornika.thechocostudios.bond/
 
 ## Contact
 
