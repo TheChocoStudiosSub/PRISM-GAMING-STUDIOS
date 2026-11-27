@@ -31,7 +31,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-off
 .main-nav{display:flex;align-items:center;flex-wrap:wrap;gap:20px}
 .main-nav a{color:var(--muted);font-size:14px;font-weight:600;text-decoration:none}
 .main-nav a:hover{color:var(--accent-hover)}.main-nav a.nav-choco-ai{display:inline-flex;align-items:center;gap:5px;color:var(--muted);font-weight:600}.main-nav a.nav-choco-ai::after{content:"↗";color:var(--accent);font-size:12px;transition:transform .2s}.main-nav a.nav-choco-ai:hover{color:var(--accent-hover)}.main-nav a.nav-choco-ai:hover::after{transform:translate(2px,-2px)}
-.language-toggle{min-width:46px;padding:8px 0;border:0;background:transparent;color:var(--ink);font:inherit;font-size:14px;font-weight:750;cursor:pointer}
+.language-picker select{min-width:128px;padding:9px 11px;border:1px solid var(--line);background:var(--paper);color:var(--ink);font:inherit;font-size:13px;font-weight:700;cursor:pointer}.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .hero{width:min(var(--content),calc(100% - 48px));margin:0 auto;padding:clamp(64px,10vw,112px) 0 104px;display:flex;flex-direction:column;align-items:flex-start}
 .hero-logo{display:block;width:clamp(132px,19vw,190px);aspect-ratio:1;height:auto;object-fit:cover;border-radius:50%;margin:0 0 38px}
 .eyebrow{margin:0 0 18px;color:var(--accent-hover);font-size:16px;font-weight:700}
@@ -80,7 +80,7 @@ h1{max-width:800px;margin-bottom:24px;font-size:clamp(48px,8vw,88px);line-height
 <a href="#contact" data-en="Contact" data-id="Kontak">Contact</a>
 <a class="nav-choco-ai" href="https://choco-ai-independent-seven.vercel.app/" target="_blank" rel="noopener noreferrer" data-en="Choco AI ↗" data-id="Choco AI ↗">Choco AI ↗</a>
 </nav>
-<button class="language-toggle" id="language-toggle" type="button" aria-label="Switch to Bahasa Indonesia" aria-pressed="false">ID</button>
+<label class="language-picker"><span class="visually-hidden">Language</span><select id="language-select" aria-label="Choose language"><option value="id">ID · Indonesia</option><option value="en">EN · English</option><option value="zh">中文 · Mandarin</option></select></label>
 </div>
 </header>
 <main id="top">
@@ -146,20 +146,71 @@ h1{max-width:800px;margin-bottom:24px;font-size:clamp(48px,8vw,88px);line-height
 <footer class="site-footer"><span>© 2026 Vornika+-</span></footer>
 <script>
 (() => {
-const toggle=document.getElementById("language-toggle");
+const select=document.getElementById("language-select");
 const translatable=document.querySelectorAll("[data-en][data-id]");
 const languageBlocks=document.querySelectorAll("[data-language]");
-let language="en";
-function setLanguage(nextLanguage){
-language=nextLanguage;
-document.documentElement.lang=language;
-translatable.forEach(element=>{element.textContent=element.dataset[language];});
-languageBlocks.forEach(element=>{element.hidden=element.dataset.language!==language;});
-toggle.textContent=language==="en"?"ID":"EN";
-toggle.setAttribute("aria-label",language==="en"?"Switch to Bahasa Indonesia":"Switch to English");
-toggle.setAttribute("aria-pressed",String(language==="id"));
+const translations={
+"Play Beyond the Ordinary.":"超越平凡，尽情畅玩。",
+"Play beyond the ordinary.":"超越平凡，尽情畅玩。",
+"The game-development branch of The Choco Studios, turning curious ideas into browser games and Windows desktop experiences.":"The Choco Studios 的游戏开发部门，将充满好奇的创意转化为浏览器游戏和 Windows 桌面体验。",
+"Explore the projects":"浏览项目",
+"Dibuat dengan imajinasi, dimainkan dengan sesuka hati.":"以想象创造，自由畅玩。",
+"About Vornika":"关于 Vornika",
+"Vornika+- began as an independently developed creative initiative. As it considered its next stage of growth, Vornika recognised that The Choco Studios (TCS) explores a broad range of ideas across different fields. Vornika believed that joining this wider ecosystem could bring fresh perspectives and more room for its own creative direction to develop. It therefore voluntarily proposed joining TCS and now serves as its dedicated game-development unit, while keeping the Vornika name, logo, tagline, and creative identity.":"Vornika+- 最初是一个独立发展的创意项目。在寻求下一阶段发展时，Vornika 发现 The Choco Studios (TCS) 涵盖多个领域并持续探索不同创意。Vornika 认为加入这一更广阔的生态系统能够带来新的视角，并为自身创意方向提供更多发展空间。因此，Vornika 主动提出加入 TCS，如今成为其专门的游戏开发部门，同时保留 Vornika 的名称、标志、标语与创意身份。",
+"Our place in TCS":"我们在 TCS 中的定位",
+"Vornika is an internal game-development unit within the TCS ecosystem. When TCS pursues a game project, Vornika is the dedicated game-focused branch that helps initiate and develop it. Its integration was proposed voluntarily by Vornika itself.":"Vornika 是 TCS 生态系统内部的游戏开发部门。当 TCS 启动游戏项目时，Vornika 负责从游戏角度发起并推进开发。加入 TCS 是 Vornika 自主提出的。",
+"What we build":"我们的创作方向",
+"The focus is on games that run directly in a web browser and desktop applications distributed as .exe files for Windows. Projects are developed within TCS, with attention to controls, performance, and the details that shape the experience.":"我们专注于可直接在网页浏览器中运行的游戏，以及以 Windows .exe 文件形式分发的桌面应用。项目在 TCS 内开发，并重视操作方式、性能和塑造体验的细节。",
+"How we work":"我们的工作方式",
+"Explore an idea, build a playable experience, then refine it through testing and iteration. The process stays practical and open to learning, with each improvement guided by what the project actually needs.":"从探索创意开始，打造可玩的体验，再通过测试与迭代持续完善。整个过程注重实践与学习，每次改进都以项目的实际需求为依据。",
+"Curiosity":"好奇心","Creativity":"创造力","Craft":"工艺","Accessibility":"易用性","Iteration":"持续迭代","Collaboration":"协作",
+"A wider space to grow":"更广阔的成长空间",
+"A dedicated game branch within The Choco Studios.":"The Choco Studios 内的专属游戏开发部门。",
+"Vornika began as an independent creative initiative and voluntarily proposed joining The Choco Studios (TCS). It recognised the breadth of TCS's ideas and cross-disciplinary work, and believed that becoming part of the ecosystem could bring new perspectives and a wider environment for Vornika's own growth.":"Vornika 最初是一个独立创意项目，并主动提出加入 The Choco Studios (TCS)。它看到了 TCS 丰富的创意与跨领域工作方式，并相信融入这一生态系统能够带来新视角，为 Vornika 自身发展提供更广阔的环境。",
+"Vornika now serves as TCS's dedicated game-development unit. When TCS pursues game initiatives, Vornika is the game-focused branch that helps initiate and develop them. Vornika retains its own name, logo, tagline, and creative direction as an integrated part of the TCS ecosystem.":"如今，Vornika 是 TCS 专属的游戏开发部门。当 TCS 推进游戏项目时，Vornika 负责协助发起并开发这些项目。作为 TCS 生态系统的一部分，Vornika 仍保留自己的名称、标志、标语和创意方向。",
+"A project to play":"可供体验的项目",
+"The first game project submitted for the Vornika branch of TCS. This single-file browser implementation includes touch and keyboard controls, score tracking, a locally saved best score, and generated sound effects. It is the starting point for Vornika game development within TCS.":"这是提交给 TCS 旗下 Vornika 部门的第一个游戏项目。此单文件浏览器版本支持触控和键盘操作、分数记录、本地保存最高分以及生成式音效。这是 Vornika 在 TCS 内开展游戏开发的起点。",
+"Play Flappy Bird":"开始游玩 Flappy Bird",
+"Get in touch":"联系我们",
+"Start a conversation.":"开启交流。",
+"Vornika is part of The Choco Studios. For game-project enquiries, use the public TCS contact email below.":"Vornika 是 The Choco Studios 的一部分。如需咨询游戏项目，请使用下方 TCS 公开联系邮箱。",
+"About":"关于","Ecosystem":"生态系统","Projects":"项目","Contact":"联系","Choco AI ↗":"Choco AI ↗"
+};
+const originalNodes=new WeakMap();
+function translateChinese(){
+ const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
+ let node;
+ while((node=walker.nextNode())){
+  if(!node.parentElement||node.parentElement.closest("script,style,noscript,select,#language-select"))continue;
+  if(!originalNodes.has(node))originalNodes.set(node,node.nodeValue||"");
+  const original=originalNodes.get(node),key=original.replace(/\s+/g," ").trim();
+  if(!key)continue;
+  const translated=translations[key];
+  if(translated){
+   const leading=(original.match(/^\s*/)||[""])[0],trailing=(original.match(/\s*$/)||[""])[0];
+   node.nodeValue=leading+translated+trailing;
+  }
+ }
 }
-toggle.addEventListener("click",()=>setLanguage(language==="en"?"id":"en"));
+function setLanguage(language){
+ const lang=["id","en","zh"].includes(language)?language:"id";
+ document.documentElement.lang=lang==="zh"?"zh-CN":lang;
+ translatable.forEach(element=>{
+   const value=lang==="zh"?(element.dataset.en||element.dataset.id):(element.dataset[lang]||element.dataset.en);
+   element.textContent=value;
+ });
+ languageBlocks.forEach(element=>{
+   element.hidden=element.dataset.language!==(lang==="id"?"id":"en");
+ });
+ if(lang==="zh")translateChinese();
+ select.value=lang;
+ select.setAttribute("aria-label",lang==="id"?"Pilih bahasa":lang==="zh"?"选择语言":"Choose language");
+ try{localStorage.setItem("vornika-language-v1",lang)}catch{}
+}
+let initial="id";
+try{const saved=localStorage.getItem("vornika-language-v1");if(["id","en","zh"].includes(saved))initial=saved}catch{}
+select.addEventListener("change",event=>setLanguage(event.target.value));
+setLanguage(initial);
 })();
 </script>
 <script defer src="/tcs-community-widget.js" data-theme="vornika"></script>
